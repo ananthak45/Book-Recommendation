@@ -1,0 +1,472 @@
+
+/* BookRecommendation.css */
+.hbody {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2.5em;
+  color: #ffffff;
+  margin: 0;
+}
+h2{
+  font-family: 'Dancing Script',cursive;
+  font-size: 2.5em;
+}
+header {
+  background-color: #444;
+  color: white;
+  text-align: center;
+  padding: 1rem;
+}
+
+main {
+  padding: 20px;
+  max-width: 800px;
+  margin: auto;
+}
+
+.search-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+#search {
+  padding: 10px;
+  width: 300px;
+  border: 1px solid #ffffff;
+}
+
+#search-btn {
+  padding: 10px;
+  border: none;
+  width: 200px;
+  background-color: #8407f8;
+  color: #ffffff;
+  cursor: pointer;
+}
+
+.filter-section {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+.book-results {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+}
+
+.book-card img {
+  max-height: 200px;
+  object-fit: contain;
+  background-color: #f3f4f6;
+  border-radius: 8px;
+}
+
+.book-card {
+  position: relative;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.book-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+}
+
+.book-title {
+  font-size: 1.1em;
+  margin: 10px 0;
+}
+
+.book-author {
+  color: #666;
+}
+
+
+.entry {
+  font-family: 'Dancing Script', cursive; /* Apply the same cursive font */
+  font-size: 4em; /* Keep the font size */
+  margin-left: 150px;
+  font-weight: bold; /* Keep the font weight */
+  width: auto;
+  text-align: center;
+  color: transparent; /* Make the text transparent for gradient effect */
+  background: linear-gradient(to right, #3b82f6, #a855f7); /* Gradient background */
+  -webkit-background-clip: text; /* Clip the background to the text */
+  background-clip: text; /* Clip the background to the text */
+  animation: text-fade 1s ease-in-out; /* Optional fade-in animation */
+}
+
+.typed-cursor {
+  opacity: 1;
+  font-size: 3em;
+  animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+@keyframes text-fade {
+  0% {
+      opacity: 0;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
+
+/* Global Styles */
+body {
+  background-color: #f7fafc; /* Tailwind's bg-gray-100 equivalent */
+}
+
+/* Import cursive font */
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+/* Header Styles */
+header {
+  background-image: linear-gradient(to right, #3b82f6, #a855f7); /* Gradient background */
+  color: white;
+  text-align: center;
+  padding: 1.5rem; /* Tailwind's py-6 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-md */
+}
+
+/* Header Text Styles */
+header h1 {
+  font-family: 'Dancing Script', cursive; /* Cursive font */
+  font-size: 4rem; /* Larger font size for better visibility */
+  font-weight: 700; /* Bold weight for prominence */
+  letter-spacing: 0.1em; /* Slight letter spacing for elegance */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5); /* Subtle shadow for depth */
+}
+
+/* Main Content */
+main {
+  max-width: 64rem; /* Tailwind's max-w-4xl */
+  margin: 2.5rem auto; /* Tailwind's mt-10 and mx-auto */
+}
+/*Login Button*/
+#login-btn {
+background: white;
+margin-left: 1150px;
+color: linear-gradient(90deg, #a855f7, #3b82f6);
+padding: 0.5rem 1rem; /* Tailwind's px-4 py-2 */
+border-radius: 0.375rem; /* Tailwind's rounded-md */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-md */
+transition: background-color 0.2s ease-in-out, transform 0.2s; /* Add transition for smooth hover effect */
+}
+
+/* Search Section */
+.search-section {
+display: flex;
+margin-left: 250px; /* Keep as is */
+margin-top: 50px; /* Keep as is */
+justify-content: center;
+gap: 1rem; /* Tailwind's space-x-4 */
+margin-bottom: 1.5rem; /* Tailwind's mb-6 */
+background-color: #f0f4ff; /* Light background for contrast */
+padding: 1rem; /* Add some padding */
+border-radius: 0.5rem; /* Rounded corners */
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+}
+
+#search {
+border: 1px solid #d1d5db; /* Tailwind's border-gray-300 */
+padding: 0.75rem; /* Tailwind's p-3 */
+border-radius: 0.375rem; /* Tailwind's rounded-md */
+width: 66.67%; /* Tailwind's w-2/3 */
+box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Light shadow for input */
+outline: none; /* Tailwind's focus:outline-none */
+transition: border-color 0.2s ease-in-out, box-shadow 0.2s ease-in-out; /* Smooth transition */
+}
+
+#search:focus {
+border-color: #3b82f6; /* Tailwind's focus:ring-blue-500 */
+box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Tailwind's focus:ring-2 focus:ring-blue-500 */
+}
+
+#search-btn {
+background: linear-gradient(90deg, #a855f7, #3b82f6); /* Gradient from purple to blue */
+color: white;
+padding: 0.5rem 1rem; /* Tailwind's px-4 py-2 */
+border-radius: 0.375rem; /* Tailwind's rounded-md */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-md */
+transition: background-color 0.2s ease-in-out, transform 0.2s; /* Add transition for smooth hover effect */
+}
+
+#search-btn:hover {
+background: linear-gradient(90deg, #3b82f6, #a855f7); /* Reverse gradient on hover */
+transform: scale(1.05); /* Slightly scale the button on hover */
+}
+
+#search-btn:active {
+transform: translateY(0); /* Reset on click */
+}
+
+/* Filter Section */
+.filter-section {
+display: flex;
+justify-content: center;
+margin-bottom: 1.5rem; /* Tailwind's mb-6 */
+}
+
+.filter-section label {
+margin-top: 13px;
+margin-right: 0.5rem; /* Tailwind's mr-2 */
+font-size: 1.125rem; /* Tailwind's text-lg */
+font-weight: 500; /* Tailwind's font-medium */
+color: #4b5563; /* A darker gray for better readability */
+}
+
+.genre-select {
+border: 1px solid #d1d5db; /* Tailwind's border-gray-300 */
+padding: 0.75rem; /* Tailwind's p-3 */
+border-radius: 0.375rem; /* Tailwind's rounded-md */
+box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-md */
+outline: none; /* Tailwind's focus:outline-none */
+transition: border-color 0.3s ease, box-shadow 0.3s ease; /* Smooth transitions */
+font-size: 1rem; /* Adjust font size for better visibility */
+color: #333; /* Darker text color */
+background: linear-gradient(to right, #f3f4f6, #e5e7eb); /* Light gradient background */
+}
+
+/* Focus and Hover Styles */
+.genre-select:focus {
+border-color: #3b82f6; /* Tailwind's focus:ring-blue-500 */
+box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.5); /* Tailwind's focus:ring-2 focus:ring-blue-500 */
+}
+
+.genre-select:hover {
+border-color: #3b82f6; /* Change border color on hover */
+background-color: #e0f7fa; /* Light blue background on hover */
+}
+
+.side-navbar {
+  width: 250px;
+  height: 100vh;
+  background: linear-gradient(90deg, #3b82f6, #a855f7);
+  color: #ffffff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  transition: transform 0.3s;
+  transform: translateX(-100%); /* Hide the sidebar initially */
+  z-index: 1000; /* Ensure the sidebar appears above other content */
+}
+
+/* Sidebar active state - visible on screen */
+.side-navbar.active-nav {
+  transform: translateX(0); /* Show the sidebar */
+}
+
+.side-navbar h3 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+.side-navbar .nav-item {
+  list-style: none;
+  margin-bottom: 10px;
+}
+
+.side-navbar .nav-link {
+  text-decoration: none;
+  color: #3b82f6;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  transition: background 0.3s;
+}
+
+.side-navbar .nav-link:hover {
+  background-color: #a855f7;
+  border-radius: 5px;
+}
+
+/* Menu button styling */
+.menu-btn {
+  position: fixed;
+  top: 20px;
+  left: 20px;
+  font-size: 24px;
+  width: 50px; /* Set a fixed width */
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  padding: 10px 15px;
+  cursor: pointer;
+  transition: background-color 0.3s, transform 0.2s;
+  z-index: 1001;
+}
+
+
+.menu-btn:hover {
+  background-color: #a855f7; /* Purple color */
+  transform: scale(1.1); /* Slightly increase the size on hover */
+}
+
+.menu-btn:focus {
+  outline: none; /* Remove outline on focus */
+}
+
+/* Entry Message Section */
+.entry {
+  font-size: 4rem; /* Custom font size for large text */
+  font-weight: bold;
+  text-align: center;
+  margin-top: 1.25rem; /* Tailwind's mt-5 */
+  color: #8a2be2; /* Custom purple color */
+}
+/* Book Results Section */
+.book-results {
+display: grid;
+grid-template-columns: repeat(1, 1fr); /* Single column on small screens */
+gap: 1.5rem; /* Adjust gap between book cards */
+padding: 1rem; /* Padding around the grid */
+}
+
+@media (min-width: 768px) {
+.book-results {
+    grid-template-columns: repeat(2, 1fr); /* Two columns on medium screens */
+}
+}
+
+@media (min-width: 1024px) {
+.book-results {
+    grid-template-columns: repeat(3, 1fr); /* Three columns on large screens */
+}
+}
+/* Book Results Section */
+.book-results {
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Single column on small screens */
+  gap: 1.5rem; /* Adjust gap between book cards */
+  padding: 1rem; /* Padding around the grid */
+}
+
+.book-card {
+  background: linear-gradient(to right, #93c5fd, #c4b5fd); /* Gradient background */
+  padding: 1.5rem; /* More padding inside cards */
+  border-radius: 1rem; /* Rounded corners */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Softer shadow effect */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth scaling and shadow transition */
+  position: relative; /* To position the heart icon */
+  
+}
+.book-card .absolute {
+  top: 10px;
+  right: 10px;
+}
+
+.text-2xl {
+  font-size: 1.75rem;
+  color: #ea00ff;
+}
+.book-card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.book-card img {
+  max-height: 200px; /* Limit the height of images */
+  object-fit: cover; /* Maintain aspect ratio and cover */
+  border-radius: 0.5rem; /* Rounded corners for images */
+  transition: transform 0.3s ease; /* Smooth scaling on hover */
+}
+
+.book-card img:hover {
+  transform: scale(1.1); /* Scale image on hover */
+}
+
+.book-title {
+  font-size: 1.25em; /* Size for book titles */
+  margin: 10px 0; /* Margin for titles */
+  color: #4f46e5; /* Darker shade of purple for titles */
+}
+
+.book-author {
+  color: #4b5563; /* Slightly darker shade for author names */
+}
+
+/* Heart Icon Styles */
+.heart-icon {
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.heart-icon.liked {
+  color: red; /* Change color to red when liked */
+}
+
+/* Styles for the no books found message */
+.text-center {
+text-align: center; /* Centered text */
+color: #9ca3af; /* Tailwind's text-gray-500 */
+font-style: italic; /* Italicize for emphasis */
+margin-top: 2rem; /* Margin for spacing */
+}
+
+/* Footer */
+.footer {
+  background-image: linear-gradient(to right, #3b82f6, #a855f7); /* Tailwind's gradient */
+  color: white;
+  text-align: center;
+  padding: 1.5rem; /* Tailwind's py-6 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-md */
+  font-family: 'CursiveFont', cursive; /* Use your desired cursive font */
+  font-size: 1.125rem; /* Adjust font size for better readability */
+}
+
+.footer p {
+  margin: 0;
+  color: white;
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.footer a {
+  color: #ffeb3b; /* A bright color for links */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Hover effect for links */
+.footer a:hover {
+  color: #ffffff; /* Change to white on hover */
+}
+
+
+.container1 {
+  position: absolute;
+  top: 30px; /* Adjust as needed */
+  right: 50px;
+  color: white;
+  border: none;
+  cursor: pointer;
+ 
+  display: flex;
+  gap: 1rem; /* Adjusts spacing between the icons */
+}

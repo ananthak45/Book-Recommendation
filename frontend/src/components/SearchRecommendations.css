@@ -1,0 +1,189 @@
+.search-page {
+    text-align: center;
+    padding: 40px;
+    background-color: #f4f7fc;
+  }
+  
+  h1 {
+    font-size: 4.5rem;
+    color: #a855f7;
+    margin-bottom: 30px;
+  }
+  
+  .search-form {
+    display: flex;
+    gap: 15px;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  
+  .search-form input {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  .search-form button {
+    background-color: #0077cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .search-form button:hover {
+    background-color: #005fa3;
+  }
+  
+  .recommendation-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  
+  .recommendation-card {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 300px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .star-rating {
+    display: inline-flex;
+    align-items: center;
+  }
+  
+  .star-rating svg {
+    margin-left: 5px;
+  }
+  
+  
+  /* SPINNER ORBITS */
+.spinner-box {
+  position: relative;
+  width: 150px;
+  height: 150px;
+  margin: 50px auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.leo {
+  position: absolute;
+  border-radius: 50%;
+  animation: spin 1.8s linear infinite;
+}
+
+.blue-orbit {
+  width: 120px;
+  height: 120px;
+  border: 3px solid #a855f7;
+  animation: spin3D 2.5s linear infinite;
+}
+
+.green-orbit {
+  width: 90px;
+  height: 90px;
+  border: 3px solid #3b82f6;
+  animation: spin3D 2s linear infinite reverse;
+}
+
+.red-orbit {
+  width: 60px;
+  height: 60px;
+  border: 3px solid #7f02c2;
+  animation: spin3D 1.5s linear infinite;
+}
+
+.white-orbit {
+  width: 40px;
+  height: 40px;
+  border: 3px solid rgba(255, 255, 255, 0.8);
+  animation: spin3D 1.2s linear infinite reverse;
+}
+
+.w1 { animation-delay: -0.4s; }
+.w2 { animation-delay: -0.8s; }
+.w3 { animation-delay: -1.2s; }
+
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+@keyframes spin3D {
+  from { transform: rotate3d(0.5, 1, 0.5, 0deg); }
+  to { transform: rotate3d(0.5, 1, 0.5, 360deg); }
+}
+/* Modal Styles */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    width: 300px;
+  }
+  
+  .modal button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .modal button:hover {
+    background-color: #0056b3;
+  }
+
+  
+.top-right-button {
+  position: absolute;
+  top: 30px; /* Adjust as needed */
+  right: 100px;
+  padding: 4px 8px; /* Smaller padding */
+  font-size: 12px; /* Smaller font size */
+  border-radius: 5px; /* Optional for rounded corners */
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100px;  /* Reduced width */
+  height: 40px;  /* Reduced height */
+}
+
+
+.top-right-button:hover {
+  transform: translateY(-2px);
+ 
+}
+
+.top-right-button:active {
+  transform: translateY(0);
+}
+
+.top-right-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+  

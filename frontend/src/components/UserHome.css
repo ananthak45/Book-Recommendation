@@ -1,0 +1,119 @@
+/* Book Results Grid */
+.book-results {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr); /* Default to 1 column */
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  @media (min-width: 640px) {
+    .book-results {
+      grid-template-columns: repeat(2, 1fr); /* For medium screens, 2 columns */
+    }
+  }
+  
+  @media (min-width: 1024px) {
+    .book-results {
+      grid-template-columns: repeat(3, 1fr); /* For large screens, 3 columns */
+    }
+  }
+  
+  /* Book Card Styling */
+  .book-card {
+    background: linear-gradient(to bottom rgba(130, 109, 237, 0.824)ed, #a621b0);
+    padding: 16px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .book-card:hover {
+    transform: scale(1.05);
+  }
+  
+  /* Image Styling */
+  .book-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: transform 0.3s ease;
+  }
+  
+  .book-card img:hover {
+    transform: scale(1.1);
+  }
+  
+  /* Button Styling */
+  In BookRecommendation.css */
+  .btn {
+    font-size: 14px; /* Make the font smaller */
+    padding: 6px 12px; /* Reduce padding */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .btn:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  
+  .book-card .btn {
+    font-size: 12px; /* Adjust the button size */
+  }
+  .btn:hover {
+    opacity: 0.9;
+  }
+  
+  .bg-blue-500 {
+    background-color: #3b82f6;
+  }
+  
+  .bg-green-500 {
+    background-color: #10b981;
+  }
+  
+  .bg-pink-500 {
+    background-color: #ec4899;
+  }
+  
+  .bg-red-500 {
+    background-color: #ef4444;
+  }
+  
+  /* Button Disabled State */
+  button:disabled {
+    background-color: #d1d5db;
+    cursor: not-allowed;
+  }
+  
+  
+/* Footer */
+.footer {
+  background-image: linear-gradient(to right, #3b82f6, #a855f7); /* Tailwind's gradient */
+  color: white;
+  text-align: center;
+  padding: 1.5rem; /* Tailwind's py-6 */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Tailwind's shadow-md */
+  font-family: 'CursiveFont', cursive; /* Use your desired cursive font */
+  font-size: 1.125rem; /* Adjust font size for better readability */
+}
+
+.footer p {
+  margin: 0;
+  color: white;
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+.footer a {
+  color: #ffeb3b; /* A bright color for links */
+  transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Hover effect for links */
+.footer a:hover {
+  color: #ffffff; /* Change to white on hover */
+}
+
+

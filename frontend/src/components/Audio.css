@@ -1,0 +1,143 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap');
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #f4f7fc;
+  color: #333;
+}
+
+.App {
+  text-align: center;
+  padding: 40px;
+  margin: 0 auto;
+  max-width: 1200px;
+}
+
+h1 {
+  font-family: 'Dancing Script', cursive;
+  font-size: 4rem;
+  color: #a855f7;
+  margin-top: 50px;
+  letter-spacing: 0.1em;
+}
+
+.search-form {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 50px 0;
+}
+
+.search-input {
+  padding: 15px 25px;
+  font-size: 18px;
+  width: 400px;
+  border: 2px solid #ccc;
+  border-radius: 30px;
+  transition: all 0.3s ease;
+}
+
+.search-input:focus {
+  border-color: #8e44ad;
+  box-shadow: 0 4px 10px rgba(142, 68, 173, 0.2);
+}
+
+.search-button {
+  padding: 15px 25px;
+  font-size: 18px;
+  background: linear-gradient(to right, #3b82f6, #a855f7);
+  color: white;
+  border: none;
+  border-radius: 30px;
+  cursor: pointer;
+  margin-left: 15px;
+}
+
+.search-results {
+  margin-top: 40px;
+  margin-left: 150px;
+}
+
+.libriVox-button {
+  padding: 12px 20px;
+  background-color: #0077cc;
+  color: white;
+  border: none;
+  border-radius: 25px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.libriVox-button:hover {
+  background-color: #005fa3;
+}
+
+.loading {
+  margin: 100px auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.loader {
+  text-align: center;
+}
+
+.loader h1 {
+  font-family: 'Poppins', sans-serif;
+  color: #a855f7;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.loader span {
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: inline-block;
+  margin: 5px;
+  background: #6a1b9a;
+  animation: bounce 1.5s infinite;
+}
+
+.loader span:nth-child(2) { background: #3b82f6; }
+.loader span:nth-child(3) { background: #a855f7; }
+.loader span:nth-child(4) { background: #0ae8e8; }
+
+@keyframes bounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-20px); }
+}
+.top-right-button {
+  position: absolute;
+  top: 30px; /* Adjust as needed */
+  right: 100px;
+  padding: 4px 8px; /* Smaller padding */
+  font-size: 12px; /* Smaller font size */
+  border-radius: 5px; /* Optional for rounded corners */
+  color: white;
+  border: none;
+  cursor: pointer;
+  width: 100px;  /* Reduced width */
+  height: 40px;  /* Reduced height */
+}
+
+
+.top-right-button:hover {
+  transform: translateY(-2px);
+ 
+}
+
+.top-right-button:active {
+  transform: translateY(0);
+}
+
+.top-right-button:focus {
+  outline: none;
+  box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
